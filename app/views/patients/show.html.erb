@@ -1,2 +1,29 @@
-<h1>Patients#show</h1>
-<p>Find me in app/views/patients/show.html.erb</p>
+<h1>Patient Record</h1>
+
+<h3>
+<%= @patient.first_name %>
+<%= @patient.last_name %>
+</h3>
+
+<a class="waves-effect waves-light btn indigo lighten-3" <%= link_to 'New Appointment', new_patient_appointment_path(@patient) %></a>
+<a class="waves-effect waves-light btn indigo lighten-3" <%= link_to 'Edit Patient', edit_patient_path(@patient) %></a>
+<a class="waves-effect waves-light btn indigo lighten-3" <%= link_to 'Back', patients_path %></a>
+<br/>
+<table class="highlight">
+<thead class="indigo-text text-lighten-3">
+<tr>
+  <th> Date </th>
+  <th> Doctor</th>
+  </tr>
+</thead>
+
+<tbody>
+
+<% @patient.appointments.each do |appointment| %>
+  <tr>
+  <td><%= link_to appointment.date, [@patient, appointment] %></td>
+  <td><%= link_to appointment.doctor_id, [@doctor, appointment] %></td>
+  </tr>
+<%end%>
+</tbody>
+</table>
