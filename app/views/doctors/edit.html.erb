@@ -1,2 +1,26 @@
-<h1>Doctors#edit</h1>
-<p>Find me in app/views/doctors/edit.html.erb</p>
+# <h1>Doctors </h1>
+
+# <%= link_to 'Appointments (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧', patient_path(@doctor) %>
+# </br>
+# <%= link_to 'Patients ❀◕ ‿ ◕❀', patients_path(@doctor) %>	
+# </br>
+# <%= link_to 'Go back to homepage <(^o^<)', patient
+
+# <ul>
+# <% @doctors.each do |trip| %>
+#     <li><%= link_to doctor.name, [@patient, doctor] %></li>
+#     <% end %>
+#     </ul>
+
+<h1>Doctors </h1>
+</br>
+<%= link_to 'Appointments ❀◕ ‿ ◕❀', edit_patient_appointment_path(@appointment) %>
+</br>
+<%= link_to 'Patients ❀◕ ‿ ◕❀', patients_path(@doctor) %>	
+</br>
+<ul>
+<% @doctors.each do |doctor| %>
+    <li><%= link_to doctor.name, [@appointment, doctor] %></li>
+    <% end %>
+    </ul>
+
