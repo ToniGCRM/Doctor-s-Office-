@@ -1,0 +1,10 @@
+
+<h1><%= @doctors.id ? 'Edit' : 'New' %></h1>
+</br>
+<div class = 'form'>
+  <%= form_for [@appointments, @doctor] do |f| %>
+    <% f.label :name %>
+    <% f.text_field :last_name, required: true %>
+    <%= f.submit %>
+  <% end %>
+</div> 
