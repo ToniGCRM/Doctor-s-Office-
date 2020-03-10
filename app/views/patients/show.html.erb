@@ -21,8 +21,8 @@
 
 <% @patient.appointments.each do |appointment| %>
   <tr>
-  <td><%= link_to appointment.date, [@patient, appointment] %></td>
-  <td><%= link_to appointment.doctor_id, [@doctor, appointment] %></td>
+  <td><%= link_to appointment.date_time, [@patient, appointment] %></td>
+  <td><%= link_to appointment.doctor_id, [@patient, appointment]  %></td>
   </tr>
 <%end%>
 </tbody>

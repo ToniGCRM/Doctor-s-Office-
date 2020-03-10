@@ -1,8 +1,6 @@
 <h1>Doctors</h1>
 
-<h3>
-<%= @doctor.last_name %>
-<%= @doctor.specialty %>
-</h3>
+<h3> Dr. <%= @doctor.last_name %> </h3>
+<h3> Specialty: <%= @doctor.specialty %></h3>
 
 <a class= <%= link_to 'Click here to add a new patient', patients_path(@appointment) %></a>

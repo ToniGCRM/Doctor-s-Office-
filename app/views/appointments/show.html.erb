@@ -1,2 +1,22 @@
-<h1>Appointments#show</h1>
-<p>Find me in app/views/appointments/show.html.erb</p>
+<h1>Appointment Info</h1>
+
+<table>
+<thead class="indigo-text text-lighten-2">
+<tr>
+  <th> Appointment Date/Time</th>
+  <th> Doctor ID </th>
+  </tr>
+</thead>
+
+<a class = "waves-effect waves-light btn indigo lighten-3" <%= link_to 'Edit Appointment', edit_patient_appointment_path(@patient, @appointment) %></a>
+<a class = "waves-effect waves-light btn indigo lighten-3" <%= link_to 'Back to Patient View', patient_path(@patient) %></a>
+<br/>
+<br/>
+
+<tbody>
+  <tr>
+  <td><%= @appointment.date_time %></td>
+  <td><%= @appointment.doctor_id %></td>
+  </tr>
+  </tbody>
+  </table>

@@ -4,6 +4,7 @@
 </br>
 <ul>
 <% @doctors.each do |doctors| %>
-    <li><%= link_to doctors.last_name, [@appointment, doctors] %></li>
+    <li><%= link_to doctors.id, [@appointment, doctors] %> <%= link_to doctors.last_name, [@appointment, doctors] %></li>
+   
     <% end %>
     </ul>
